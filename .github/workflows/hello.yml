@@ -1,0 +1,16 @@
+// this is the yml github action triggerin file
+
+name : simple github action demonstration
+
+on : 
+  push:
+    jobs: 
+      build1: 
+        runs-on: ubuntu-latest
+
+        steps:
+          -name : checkout the sourcecode to the server
+          uses : actions/checkout@v4
+
+          -name : executing python file
+          run : python hello.py
