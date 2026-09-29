@@ -1,5 +1,3 @@
-// this is the yml github action triggerin file
-
 name : simple github action demonstration
 
 on : 
