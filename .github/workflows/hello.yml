@@ -1,14 +1,15 @@
-name : simple github action demonstration
+name: Simple GitHub Action
 
-on : 
+on:
   push:
-    jobs: 
-      build1: 
-        runs-on: ubuntu-latest
 
-        steps:
-          -name : checkout the sourcecode to the server
-          uses : actions/checkout@v4
+jobs:
+  build1:
+    runs-on: ubuntu-latest
 
-          -name : executing python file
-          run : python hello.py
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@v4
+
+      - name: Execute Python file
+        run: python hello.py
